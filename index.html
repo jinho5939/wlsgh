@@ -1,38 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html lang="kr">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="index.css">
-  <title>롤 전적 검색은 op.gg</title>
-</head>
+  <title>롤 전적 검색은 OP.GG</title>
+  <link rel="icon" href="/img/op.png">
+  <script src="https://kit.fontawesome.com/b93a0d37af.js" crossorigin="anonymous"></script>
+  <head>
+    <body>
 
-<body>
-  <div class="op">
-    <img id="op" src="img/op.png">
-  </div>
-
-  <div class="menu">
-    <a href="./communin.html"><div class="item">커뮤니티</div></a>
-    <a href="./user.html"><div class="item">소환사 랭킹</div></a>
-    <a href="./champion.html"><div class="item">쳄피언 랭킹</div></a>
-  </div>
-
-
-  <div class="main">
-    <img id="main" src="img/rb.jpg">
-  </div>
-
-  <container class="searchC">
-
-    <div class="search">
-      <input placeholder="소환사명,소환사명,..." class="sc" type="text" title="검색">
-      <button class="button" style="font-size: 14px;">GG</button>
+      <heade>
+        <link rel="stylesheet" href="main.css">
+      </heade>
+      <script src=main.js></script>
+      <input id="btnDisplayMode" class="btn" type="button" value="다크모드로 전환" onclick="setDisplayAppreance(this);">
+      </head>
+      
+      <div class="icon">
+        <img id="op" src="img/op.png">
+  <div>
+    <i id="icon" class="fa-regular fa-sun"></i>
+    <i id="icon" class="fa-regular fa-message"></i>
+    <button class="menu-btn" type="button"> <i id="icon" class="fa-solid fa-globe"></i> </button>
     </div>
+  </div>
+ 
+  <div class="menu">
+    <a href="https://www.op.gg/champions"><div class="item">챔피언 랭킹</div></a>
+    <a href="https://www.op.gg/leaderboards/tier"><div class="item">소환사 랭킹</div></a>
+    <a href="https://talk.op.gg/s/lol/all?sort=popular"><div class="item">커뮤니티</div></a>
+  </div>
+  
+  <div class="main">
+  <div class="carousel-wrapper">
+    <div class="carousel">
+      <img
+        src="img/cp.jpg"
+        alt=""  />
+      <img
+        src="img/cp2.jpg"
+        alt="" />
+      <img
+        src="img/cp3.jpg"
+        alt="" />
+      <img
+        src="img/cp4.jpg"
+        alt=""/>
+      </div>
+    </div>
+    <button class="prev" type="button"><i class="fa-solid fa-square-caret-left"></i></i></button>
+    <button class="next" type="button"><i class="fa-solid fa-square-caret-right"></i></i></button>
+  </div>
+  
+  <script src="./index.js"></script>
+  
+  
+  <div class="search">
+    <input placeholder="소환사명,소환사명,..." class="sc" type="text" title="검색">
+    <button>GG</button>
+  </div>
+  <!-- //////////////////////////////////////////////////////////////// -->
     
-  </container>
+    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+    <script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
+  </head>
+  <body>
+    <div class="embla">
+      <div class="embla__container">
+        <img src="img/cf.jpeg"></img>
+        <img src="img/cf2.jpg"></img>
+        <img src="img/cf3.jpg"></img>
+        <img src="img/cf4.jpg"></img>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var emblaNode = document.querySelector(".embla");
+      var options = { loop: false };
+      var plugins = [EmblaCarouselAutoplay()]; // Plugins
+
+      var embla = EmblaCarousel(emblaNode, options, plugins);
+    </script>
 
 </body>
+
 
 </html>
