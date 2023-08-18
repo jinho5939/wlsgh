@@ -3,6 +3,11 @@
   font-family: 'Lilita One', cursive;
 }
 
+body{
+  margin: 0;
+}
+
+
 a {
   text-decoration: none;
 }
@@ -16,6 +21,7 @@ a {
   font-size: 30px;
   color: darkblue;
   background-color: #5383e8;
+  border-radius:20%;
 }
 .icon {
   display: flex;
@@ -60,23 +66,26 @@ a {
   overflow: hidden;
   border-radius: 20px;
 }
+i {
+  font-size: 55px;
+}
 
-.carousel-wrapper > .carousel {
+.carousel-wrapper > .carousel2 {
   display: flex;
   transform: translate3d(0, 0, 0);
   transition: transform 0.2s;
 }
 
-.carousel-wrapper > .carousel > img {
-  width: 600px;
-  height: 355px;
+.carousel-wrapper > .carousel2 > img {
+  width: 100%;
 }
 
-i {
-  font-size: 55px;
+.main{
+  display: flex;
+  display: center;
 }
 
-.prev{
+.left{
   height: 70px;
   width:70px;
   position:absolute;
@@ -89,7 +98,7 @@ i {
   border: none;
   border-radius: 20%;
 }
-.next{
+.right{
   height: 70px;
   width:70px;
   position:absolute;
@@ -161,20 +170,57 @@ i {
 
   .btn {
     float: right;
-    width: 200px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     border-radius: 50px;
     font-size: 15px;
     text-align: center;
     background-color: black;
     color: white;
-    margin-top: 20px;
+    margin-top: 1px;
     border: 1px solid gray;
-    
   }
-p{
-    color: red;
+  
+*{
+  box-sizing: border-box;
 }
-.image{
-    display: block; margin: 0px auto;
+
+.box{
+  display: flex;
+}
+
+.flex_box{
+  display: flex;
+  flex: start;
+  align-items: center;
+  height: 25vh;
+}
+
+.carousel-indicators{
+}
+
+  .carousel-item {
+    color: white;
+    font-size: 48px;
+    padding: .5em;
+    text-align: center;
+    height: 400px;
+  }
+
+.carousel-inner{
+  height: 700px;
+  width: 300px;
+}
+
+.carousel slide{
+  flex-direction: column-reverse;
+}
+
+/* .carousel-control-prev{
+  height: 400px;
+  width: 200px;
+}
+.carousel-control-next{
+  height: 400px;
+  width: 200px;
 }

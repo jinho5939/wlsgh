@@ -2,86 +2,132 @@
 <html lang="kr">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="index.css">
   <title>롤 전적 검색은 OP.GG</title>
   <link rel="icon" href="/img/op.png">
   <script src="https://kit.fontawesome.com/b93a0d37af.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
   <head>
     <body>
 
-      <heade>
+ <heade>
         <link rel="stylesheet" href="main.css">
       </heade>
       <script src=main.js></script>
-      <input id="btnDisplayMode" class="btn" type="button" value="다크모드로 전환" onclick="setDisplayAppreance(this);">
-      </head>
-      
-      <div class="icon">
-        <img id="op" src="img/op.png">
-  <div>
-    <i id="icon" class="fa-regular fa-sun"></i>
-    <i id="icon" class="fa-regular fa-message"></i>
+ </heade>
+
+ <div class="icon">
+   <img id="op" src="img/op.png">
+   <div>
+    <i id="icon" class="fa-sharp fa-regular fa-moon" onclick="setDisplayAppreance();"><i id="icon" class="fa-regular fa-sun"></i></i>
     <button class="menu-btn" type="button"> <i id="icon" class="fa-solid fa-globe"></i> </button>
+    <i id="icon" class="fa-regular fa-message"></i>
     </div>
   </div>
- 
+  
   <div class="menu">
     <a href="https://www.op.gg/champions"><div class="item">챔피언 랭킹</div></a>
     <a href="https://www.op.gg/leaderboards/tier"><div class="item">소환사 랭킹</div></a>
     <a href="https://talk.op.gg/s/lol/all?sort=popular"><div class="item">커뮤니티</div></a>
   </div>
   
-  <div class="main">
-  <div class="carousel-wrapper">
-    <div class="carousel">
-      <img
+  <div class="box">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel"> 
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item">
+          <img src="img/team3.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>1등</h5>
+            <p>케이티</p>
+          </div>
+        </div> 
+        <div class="carousel-item active">
+          <img src="img/team1.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>2등</h5>
+            <p>젠지</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/team2.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>3등</h5>
+            <p>티원</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+    </div>
+    
+  
+    <div class="main">
+      <div class="carousel-wrapper">
+        <div class="carousel2">
+        <img
         src="img/cp.jpg"
         alt=""  />
-      <img
+        <img
         src="img/cp2.jpg"
         alt="" />
-      <img
+        <img
         src="img/cp3.jpg"
         alt="" />
-      <img
+        <img
         src="img/cp4.jpg"
         alt=""/>
       </div>
-    </div>
-    <button class="prev" type="button"><i class="fa-solid fa-square-caret-left"></i></i></button>
-    <button class="next" type="button"><i class="fa-solid fa-square-caret-right"></i></i></button>
-  </div>
-  
-  <script src="./index.js"></script>
-  
-  
-  <div class="search">
-    <input placeholder="소환사명,소환사명,..." class="sc" type="text" title="검색">
-    <button>GG</button>
-  </div>
-  <!-- //////////////////////////////////////////////////////////////// -->
-    
-    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
-    <script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
-  </head>
-  <body>
-    <div class="embla">
-      <div class="embla__container">
-        <img src="img/cf.jpeg"></img>
-        <img src="img/cf2.jpg"></img>
-        <img src="img/cf3.jpg"></img>
-        <img src="img/cf4.jpg"></img>
       </div>
+      <button class="left" type="button"><i class="fa-solid fa-square-caret-left"></i></i></button>
+      <button class="right" type="button"><i class="fa-solid fa-square-caret-right"></i></i></button>
     </div>
-    <script type="text/javascript">
-      var emblaNode = document.querySelector(".embla");
-      var options = { loop: false };
-      var plugins = [EmblaCarouselAutoplay()]; // Plugins
+ 
+</div>
 
-      var embla = EmblaCarousel(emblaNode, options, plugins);
+<div class="search">
+  <input placeholder="소환사명,소환사명,..." class="sc" type="text" title="검색">
+  <button>GG</button>
+</div>
+<!-- //////////////////////////////////////////////////////////////// -->
+
+<script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+<script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
+</head>
+<body>
+  <div class="embla">
+    <div class="embla__container">
+      <img src="img/cf.jpeg"></img>
+      <img src="img/cf2.jpg"></img>
+      <img src="img/cf3.jpg"></img>
+      <img src="img/cf4.jpg"></img>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var emblaNode = document.querySelector(".embla");
+    var options = { loop: false };
+    var plugins = [EmblaCarouselAutoplay()]; // Plugins
+    
+    var embla = EmblaCarousel(emblaNode, options, plugins);
     </script>
+    </container>
+  </div>
+  
+</div>
+</div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script src="./index.js"></script>
 </body>
-
 
 </html>
