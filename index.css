@@ -42,6 +42,8 @@ a {
   margin: 50px auto;
   width: 600px;
   height: 355px;
+  margin-left: 350px;
+  margin-top: 10%;
 }
 .menu{
   background-color :darkblue;
@@ -118,6 +120,7 @@ i {
   align-self: center;
   height: 90px;
   width: 600px;
+  margin-top: 0%;
 }
 
 .search > button {
@@ -194,9 +197,6 @@ i {
   flex: start;
   align-items: center;
   height: 25vh;
-}
-
-.carousel-indicators{
 }
 
   .carousel-item {
